@@ -1,0 +1,17 @@
+<input id="1" onkeyup="rf(event,1)"> 
+<input id="2" onkeyup="rf(event,2)">
+<!--<button onclick="rf()">Add</button> -->
+<p>Result</p>
+<p id="re"></p>
+
+<script>
+    var a = document.getElementById("1")
+    var b = document.getElementById("2")
+
+    function rf(event,i){
+        var x = Number(i==1?event.target.value:a.value)
+        var y = Number(i==2?event.target.value:b.value)
+        var add = x+y
+        document.getElementById("re").textContent = add
+    }
+</script>
